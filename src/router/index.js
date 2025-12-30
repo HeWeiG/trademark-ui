@@ -16,10 +16,16 @@ const router = createRouter({
       component: () => import('../views/home/Index.vue')
     },
     {
-      path: '/trademark',
-      name: 'trademark',
+      path: '/classes',
+      name: 'classes',
       meta: { title: '分类管理', icon: 'Collection' },
       component: () => import('../views/classes/Index.vue')
+    },
+    {
+      path: '/trademark',
+      name: 'trademark',
+      meta: { title: '商标管理', icon: 'CollectionTag' },
+      component: () => import('../views/trademark/Index.vue')
     },
     // {
     //   path: '/transaction',

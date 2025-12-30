@@ -15,7 +15,7 @@
         :key="route.path"
         :index="route.path"
       >
-        <component :is="`el-icon-${route.meta.icon}`" />
+      <el-icon v-if="route.meta.icon"><component :is="route.meta.icon" /></el-icon>
         <span>{{ route.meta.title }}</span>
       </el-menu-item>
     </el-menu>

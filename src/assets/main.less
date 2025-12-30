@@ -122,3 +122,125 @@ body{
   justify-content: flex-end;
   margin-top: 20px;
 }
+
+/* 商标编辑表单公共样式 */
+.trademark-edit-dialog {
+  max-height: 80vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* 商标编辑表单样式 */
+.trademark-edit-dialog {
+  .el-dialog__body {
+    padding: 15px 20px;
+    max-height: calc(80vh - 160px);
+    overflow-y: auto;
+  }
+  
+  .compact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+  
+  .form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    
+    .el-form-item {
+      margin-bottom: 0;
+      min-height: 70px;
+    }
+  }
+  
+  // 商标图样样式
+  .trademark-image-uploader {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+  
+  .image-preview {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+  }
+  
+  .preview-image {
+    max-width: 200px;
+    max-height: 200px;
+    border: 1px solid #dcdfe6;
+    border-radius: 4px;
+    padding: 4px;
+    object-fit: contain;
+  }
+  
+  .image-info {
+    font-size: 12px;
+    color: #909399;
+    word-break: break-all;
+    max-width: 300px;
+  }
+  
+  .file-id {
+    background: #f5f7fa;
+    padding: 4px 8px;
+    border-radius: 4px;
+    font-family: monospace;
+    font-size: 11px;
+  }
+  
+  .image-actions {
+    display: flex;
+    gap: 8px;
+  }
+  
+  .image-upload {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+  
+  .el-upload__tip {
+    font-size: 12px;
+    color: #909399;
+  }
+  
+  // 响应式设计
+  @media (max-width: 1100px) {
+    .form-row {
+      grid-template-columns: 1fr;
+      gap: 16px;
+    }
+    
+    .preview-image {
+      max-width: 150px;
+      max-height: 150px;
+    }
+    
+    .file-id {
+      max-width: 200px;
+    }
+  }
+}
+
+.trademark-dialog-footer {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+}
+
+.trademark-edit-dialog .el-dialog__footer {
+  padding: 10px 15px;
+  border-top: 1px solid #ebeef5;
+  background-color: #f5f7fa;
+}
+
+.trademark-form-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 300px;
+}

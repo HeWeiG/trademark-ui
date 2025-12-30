@@ -1,14 +1,14 @@
 <template>
   <div class="page-container">
     <el-breadcrumb separator="/" class="breadcrumb">
-      <el-breadcrumb-item>分类管理</el-breadcrumb-item>
+      <el-breadcrumb-item><el-icon><Collection /></el-icon> 分类管理</el-breadcrumb-item>
     </el-breadcrumb>
 
     <!-- 搜索区域 -->
     <div class="search-container">
       <el-input
-        v-model="keyword"
-        placeholder="请输入分类名称或代码"
+        v-model.trim="keyword"
+        placeholder="输入查询条件"
         prefix-icon="Search"
         clearable
         class="search-input"

@@ -52,6 +52,30 @@ class ClassesService {
       }
     }
   }
+  async queryClassesOptions(params) {
+    try {
+      const result = await cloudbase.callFunction({
+        name: 'batch-classes',
+        data: params
+      })
+      if (result.result && result.result.code === 200) {
+        return {
+          success: true,
+          data: result.result.data
+        }
+      } else {
+        return {
+          success: false,
+          message: result.result.message || '查询失败'
+        }
+      }
+    } catch (error) {
+      return {
+        success: false,
+        message: error.message || '网络请求失败'
+      }
+    }
+  }
 }
 
 export default new ClassesService()
